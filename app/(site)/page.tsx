@@ -13,7 +13,7 @@ export default async function Home() {
 						href={`/projects/${project.slug}`}
 						key={project._id}
 						className="relative sm:text-opacity-100 md:text-opacity-0 lg:text-opacity-0 md:hover:text-opacity-100 lg:hover:text-opacity-100 text-gray leading-tight">
-						<div className="px-2 absolute flex flex-row justify-between w-full text-xl bottom-0">
+						<div className="px-2 absolute flex flex-row justify-between w-full text-3xl bottom-0">
 							<div className="font-customBold">{project.name}</div>
 						</div>
 						{project.image ? (
