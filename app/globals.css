@@ -27,6 +27,6 @@
 	src: url("/fonts/NeueHaasDisplay-Light.woff2");
 }
 
-/* * {
-	-webkit-font-smoothing: none;
-} */
+* {
+	line-height: 1;
+}

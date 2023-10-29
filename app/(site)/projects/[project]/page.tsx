@@ -16,11 +16,11 @@ export default async function Project({ params }: Props) {
 	return (
 		<div className="">
 			<div className="relative w-screen h-screen z font-customBlack">
-				<div className="absolute pt-40 z-30 w-screen h-screen overflow-scroll text-gray">
-					<header className="border-b-2 flex sm:flex-col md:flex-row lg:flex-row  sm:text-2xl md:text-6xl lg:text-6xl justify-between mb-20">
-						<h1 className="">{project.name}</h1>
+				<div className="absolute pt-20 z-30 w-screen h-screen overflow-scroll">
+					<header className="flex sm:flex-col md:flex-row lg:flex-row  sm:text-2xl md:text-5xl lg:text-6xl justify-between ">
+						<h1 className="text-ash">{project.name}</h1>
 					</header>
-					<div className="sm:text-2xl md:text-6xl lg:text-6xl text-justify font-customBold">
+					<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
 						<PortableText value={project.content}></PortableText>
 					</div>
 				</div>

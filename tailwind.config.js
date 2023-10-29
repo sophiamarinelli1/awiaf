@@ -27,11 +27,7 @@ module.exports = {
 			cream: "#F3F7F3",
 			black: "#211D1D",
 			gray: "#BEBEBE",
-			pink: "#CF00F1",
-			"gray-dark": "#273444",
-			"gray-light": "#fafafa",
-			mint: "#D1FFE9",
-			red: "#EF0D36",
+			ash: "#8C8C8C",
 		},
 		extend: {
 			backgroundColor: {
