@@ -31,7 +31,9 @@ export default function RootLayout({
 					</Link>
 				</header>
 				<main>{children}</main>
-				<footer className="h-screen flex items-end">Dedicated to Cyrus</footer>
+				<footer className="h-screen flex items-end text-xl">
+					Dedicated to Cyrus
+				</footer>
 			</body>
 		</html>
 	);
