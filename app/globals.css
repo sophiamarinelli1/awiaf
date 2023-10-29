@@ -4,27 +4,27 @@
 
 @font-face {
 	font-family: "NeueHaasDisplay-Black";
-	src: url("/fonts/NeueHaasDisplayBlack.ttf");
+	src: url("/fonts/NeueHaasDisplay-Black.woff2");
 }
 
 @font-face {
 	font-family: "NeueHaasDisplay-Bold";
-	src: url("/fonts/NeueHaasDisplayBold.ttf");
+	src: url("/fonts/NeueHaasDisplay-Bold.woff2");
 }
 
 @font-face {
 	font-family: "NeueHaasDisplay-Medium";
-	src: url("/fonts/NeueHaasDisplayMediu.ttf");
+	src: url("/fonts/NeueHaasDisplay-Mediu.woff2");
 }
 
 @font-face {
 	font-family: "NeueHaasDisplay-Roman";
-	src: url("/fonts/NeueHaasDisplayRoman.ttf");
+	src: url("/fonts/NeueHaasDisplay-Roman.woff2");
 }
 
 @font-face {
 	font-family: "NeueHaasDisplay-Light";
-	src: url("/fonts/NeueHaasDisplayLight.ttf");
+	src: url("/fonts/NeueHaasDisplay-Light.woff2");
 }
 
 /* * {
