@@ -8,19 +8,6 @@ type Props = {
 	params: { project: string };
 };
 
-function formatDate(dateString) {
-	const options = {
-		year: "numeric",
-		month: "numeric",
-		day: "2-digit",
-	};
-	const formattedDate = new Date(dateString).toLocaleDateString(
-		"en-US",
-		options
-	);
-	return formattedDate;
-}
-
 export default async function Project({ params }: Props) {
 	const slug = params.project;
 	const project = await getProject(slug);
@@ -32,7 +19,6 @@ export default async function Project({ params }: Props) {
 				<div className="absolute pt-40 z-30 w-screen h-screen overflow-scroll text-gray">
 					<header className="border-b-2 flex sm:flex-col md:flex-row lg:flex-row sm:text-4xl md:text-6xl lg:text-6xl  justify-between mb-20">
 						<h1 className="">{project.name}</h1>
-						<div className="text-xl">{formatDate(project._createdAt)}</div>
 					</header>
 					<div className="sm:text-4xl md:text-6xl lg:text-6xl text-justify font-customBold">
 						<PortableText value={project.content}></PortableText>
@@ -58,7 +44,6 @@ export default async function Project({ params }: Props) {
 							className="flex md:flex-row lg:flex-row sm:border-b-2 justify-between w-full lg:hover:text-black lg:hover:border-b-2 lg:hover:border-black items-center ">
 							<div className="flex sm:flex-col md:flex-row lg:flex-row sm:w-4/6 lg:w-1/2 h-full align-center pl-2">
 								<div className="w-3/6 capitalize">{project.name}</div>
-								<div className="w-3/6">{formatDate(project._createdAt)}</div>
 							</div>
 							{project.image ? (
 								<Image

@@ -2,19 +2,6 @@ import { getProjects } from "@/sanity/schemas/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
-function formatDate(dateString) {
-	const options = {
-		year: "numeric",
-		month: "2-digit",
-		day: "2-digit",
-	};
-	const formattedDate = new Date(dateString).toLocaleDateString(
-		"en-US",
-		options
-	);
-	return formattedDate;
-}
-
 export default async function Home() {
 	const projects = await getProjects();
 
@@ -28,9 +15,6 @@ export default async function Home() {
 						className="relative sm:text-opacity-100 md:text-opacity-0 lg:text-opacity-0 md:hover:text-opacity-100 lg:hover:text-opacity-100 text-gray leading-tight">
 						<div className="px-2 absolute flex flex-row justify-between w-full text-xl bottom-0">
 							<div className="font-customBold">{project.name}</div>
-							<div className="font-customBold">
-								{formatDate(project._createdAt)}
-							</div>
 						</div>
 						{project.image ? (
 							<Image
