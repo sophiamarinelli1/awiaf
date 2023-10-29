@@ -22,7 +22,7 @@ export default async function Home() {
 								alt={project.name}
 								width={1000}
 								height={1000}
-								className="w-full h-[512px] object-cover hover:opacity-0"
+								className="w-full h-[512px] object-cover sm:hover-opacity-100 md:hover:opacity-0 lg:hover:opacity-0"
 							/>
 						) : (
 							<div className="sm:w-full md:w-full lg:w-2/6 sm:h-[256px] md:h-fill lg:h-fill bg-green"></div>

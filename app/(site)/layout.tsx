@@ -22,7 +22,7 @@ export default function RootLayout({
 				<header className="fixed z-50">
 					<Link
 						href="/"
-						className="font-customBlack sm:text-4xl lg:text-6xl w-screen flex justify-between hover:text-black">
+						className="font-customBlack sm:text-3xl lg:text-6xl w-screen flex justify-between hover:text-black">
 						<span>A</span>
 						<span>Woman</span>
 						<span>is</span>
