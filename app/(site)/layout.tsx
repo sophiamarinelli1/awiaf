@@ -22,7 +22,7 @@ export default function RootLayout({
 				<header className="fixed z-50">
 					<Link
 						href="/"
-						className="font-customBlack sm:text-4xl md:text-6xl lg:text-6xl w-screen flex justify-between hover:text-black">
+						className="font-customBlack sm:text-4xl lg:text-6xl w-screen flex justify-between hover:text-black">
 						<span>A</span>
 						<span>Woman</span>
 						<span>is</span>
@@ -31,6 +31,7 @@ export default function RootLayout({
 					</Link>
 				</header>
 				<main>{children}</main>
+				<footer className="h-screen flex items-end">Dedicated to Cyrus</footer>
 			</body>
 		</html>
 	);
