@@ -35,31 +35,6 @@ export default async function Project({ params }: Props) {
 					/>
 				)}
 			</div>
-			<div className="justify-items-center w-screen">
-				<div className="w-full font-customBold">
-					{projects.map((project) => (
-						<Link
-							href={`/projects/${project.slug}`}
-							key={project._id}
-							className="flex md:flex-row lg:flex-row sm:border-b-2 justify-between w-full lg:hover:text-black lg:hover:border-b-2 lg:hover:border-black items-center ">
-							<div className="flex sm:flex-col md:flex-row lg:flex-row sm:w-4/6 lg:w-1/2 h-full align-center pl-2">
-								<div className="w-3/6 capitalize">{project.name}</div>
-							</div>
-							{project.image ? (
-								<Image
-									src={project.image}
-									alt={project.name}
-									width={1000}
-									height={1000}
-									className="sm:w-32 md:w-32 lg:w-32 sm:h-32 md:h-32 lg:h-32 object-cover"
-								/>
-							) : (
-								<div className="sm:w-full md:w-16 lg:w-16 sm:h-fill md:h-16 lg:h-16	 bg-red"></div>
-							)}
-						</Link>
-					))}
-				</div>
-			</div>
 		</div>
 	);
 }
