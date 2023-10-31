@@ -12,6 +12,7 @@ const config = defineConfig({
 	basePath: "/admin",
 	plugins: [deskTool(), visionTool()],
 	schema: { types: schemas },
+	useCdn: false,
 });
 
 export default config;
