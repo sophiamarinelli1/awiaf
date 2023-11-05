@@ -8,32 +8,42 @@ type Props = {
 	params: { project: string };
 };
 
+function formatDateToMonthDDYYYY(isoDate) {
+	const date = new Date(isoDate);
+	const options = { year: "numeric", month: "long", day: "numeric" };
+	return date.toLocaleDateString(undefined, options);
+}
+
 export default async function Project({ params }: Props) {
 	const slug = params.project;
 	const project = await getProject(slug);
 	const projects = await getProjects();
 
+	// Format the date
+	const formattedDate = formatDateToMonthDDYYYY(project.date);
+
 	return (
-		<div className="">
-			<div className="relative w-screen h-screen z font-customBlack">
-				<div className="absolute pt-20 z-30 w-screen h-screen overflow-scroll">
-					<header className="flex sm:flex-col md:flex-row lg:flex-row  sm:text-2xl md:text-5xl lg:text-6xl justify-between ">
-						<h1 className="text-ash">{project.name}</h1>
-					</header>
-					<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
-						<PortableText value={project.content}></PortableText>
-					</div>
-				</div>
-				<div className="absolute w-full h-full object-cover bg-cream z-20 opacity-90 mix-blend-screen"></div>
-				{project.image && (
-					<Image
-						src={project.image}
-						alt={project.name}
-						width={1000}
-						height={1000}
-						className="absolute w-full h-full object-cover"
-					/>
-				)}
+		<div className="pt-20 px-4">
+			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash">
+				<h1 className=" ">{project.name}</h1>
+				<h1>{formattedDate}</h1> {/* Display the formatted date */}
+			</header>
+			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
+				<PortableText value={project.content}></PortableText>
+			</div>
+			<div className="w-full grid grid-cols-8 pt-10 pb-10">
+				{Array.isArray(project.gallery) &&
+					project.gallery.length > 0 &&
+					project.gallery.map((slide, i) => (
+						<Image
+							key={i}
+							src={slide.asset.url}
+							alt=""
+							width={1000}
+							height={1000}
+							className="object-contain h-[256px]"
+						/>
+					))}
 			</div>
 		</div>
 	);

@@ -7,25 +7,23 @@ export default async function Home() {
 
 	return (
 		<div className="w-screen">
-			<div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 font-customMed">
+			<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
 				{projects.map((project) => (
 					<Link
 						href={`/projects/${project.slug}`}
 						key={project._id}
-						className="relative sm:text-opacity-100 md:text-opacity-0 lg:text-opacity-0 md:hover:text-opacity-100 lg:hover:text-opacity-100 text-gray leading-tight">
-						<div className="px-2 absolute flex flex-row justify-between w-full text-2xl bottom-0">
-							<div className="font-customBold">{project.name}</div>
+						className=" relative">
+						<div className="h-16 absolute flex px-4 items-center text-xl text-gray font-customBlack absolute bottom-0">
+							<div className="capitalize hidden">{project.name}</div>
 						</div>
-						{project.image ? (
+						{project.image && (
 							<Image
 								src={project.image}
 								alt={project.name}
 								width={1000}
 								height={1000}
-								className="w-full h-[512px] object-cover sm:hover-opacity-100 md:hover:opacity-0 lg:hover:opacity-0"
+								className="sm:h-[33vh] md:h-[50vh] lg:h-[50vh] w-fill object-cover md:hover:border-gray lg:hover:border-gray hover:border"
 							/>
-						) : (
-							<div className="sm:w-full md:w-full lg:w-2/6 sm:h-[256px] md:h-fill lg:h-fill bg-green"></div>
 						)}
 					</Link>
 				))}

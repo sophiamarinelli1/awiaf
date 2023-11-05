@@ -5,7 +5,9 @@ export type Project = {
 	_createdAt: Date;
 	name: string;
 	slug: string;
+	date: Date;
 	image: string;
 	url: string;
+	gallery: string[];
 	content: PortableTextBlock[];
 };

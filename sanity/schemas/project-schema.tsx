@@ -15,6 +15,11 @@ const project = {
 			options: { source: "name" },
 		},
 		{
+			name: "date",
+			title: "Date",
+			type: "date",
+		},
+		{
 			name: "image",
 			title: "Image",
 			type: "image",
@@ -26,6 +31,12 @@ const project = {
 					type: "string",
 				},
 			],
+		},
+		{
+			name: "gallery",
+			title: "Gallery",
+			type: "array",
+			of: [{ type: "image" }],
 		},
 		{
 			name: "url",
