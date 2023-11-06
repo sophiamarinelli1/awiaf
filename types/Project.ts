@@ -8,6 +8,6 @@ export type Project = {
 	date: Date;
 	image: string;
 	url: string;
-	gallery: string[];
+	gallery: Array<{ asset: { url: string } }>;
 	content: PortableTextBlock[];
 };

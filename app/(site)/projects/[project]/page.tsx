@@ -8,19 +8,30 @@ type Props = {
 	params: { project: string };
 };
 
-function formatDateToMonthDDYYYY(isoDate) {
+function formatDateToMonthDDYYYY(isoDate: string | Date) {
+	if (isoDate instanceof Date) {
+		// Convert Date object to ISO 8601 date string
+		isoDate = isoDate.toISOString();
+	}
+
 	const date = new Date(isoDate);
-	const options = { year: "numeric", month: "long", day: "numeric" };
+	const options: Intl.DateTimeFormatOptions = {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
 	return date.toLocaleDateString(undefined, options);
 }
+
+// In your component:
 
 export default async function Project({ params }: Props) {
 	const slug = params.project;
 	const project = await getProject(slug);
 	const projects = await getProjects();
-
-	// Format the date
-	const formattedDate = formatDateToMonthDDYYYY(project.date);
+	const projectDate =
+		project.date instanceof Date ? project.date : new Date(project.date);
+	const formattedDate = formatDateToMonthDDYYYY(projectDate);
 
 	return (
 		<div className="pt-20 px-4">
