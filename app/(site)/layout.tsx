@@ -31,7 +31,7 @@ export default function RootLayout({
 					</Link>
 				</header>
 				<main className="">{children}</main>
-				<footer className="px-4 py-4 flex flex-row justify-between w-full font-customMed text-black ">
+				<footer className="px-4 py-4 flex flex-row justify-between w-full text-black ">
 					<p className="">ScM</p>
 					<p>2023</p>
 				</footer>
