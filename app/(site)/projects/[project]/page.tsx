@@ -42,7 +42,7 @@ export default async function Project({ params }: Props) {
 			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
 				<PortableText value={project.content}></PortableText>
 			</div>
-			<div className="w-full grid grid-cols-8 pt-10 pb-10">
+			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-10 pb-10">
 				{Array.isArray(project.gallery) &&
 					project.gallery.length > 0 &&
 					project.gallery.map((slide, i) => (
