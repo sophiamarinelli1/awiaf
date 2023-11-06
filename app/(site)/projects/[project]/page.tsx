@@ -35,14 +35,14 @@ export default async function Project({ params }: Props) {
 
 	return (
 		<div className="px-4">
-			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash pt-20 pb-10 flex flex-col justify-center">
+			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash pt-32 pb-16 flex flex-col justify-center">
 				<h1 className=" ">{project.name}</h1>
 				<h1>{formattedDate}</h1> {/* Display the formatted date */}
 			</header>
 			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
 				<PortableText value={project.content}></PortableText>
 			</div>
-			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-10 pb-10">
+			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-16 pb-16">
 				{Array.isArray(project.gallery) &&
 					project.gallery.length > 0 &&
 					project.gallery.map((slide, i) => (
