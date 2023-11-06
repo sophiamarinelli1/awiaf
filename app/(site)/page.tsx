@@ -22,7 +22,7 @@ export default async function Home() {
 								alt={project.name}
 								width={1000}
 								height={1000}
-								className="sm:h-[50vh] md:h-[50vh] lg:h-[50vh] w-fill object-cover md:hover:border-gray lg:hover:border-gray hover:border"
+								className="sm:h-[50vh] md:h-[50vh] lg:h-[50vh] w-fill object-cover md:hover:border-black lg:hover:border-black hover:border"
 							/>
 						)}
 					</Link>

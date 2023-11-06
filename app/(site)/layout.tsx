@@ -31,8 +31,15 @@ export default function RootLayout({
 					</Link>
 				</header>
 				<main className="min-h-screen">{children}</main>
-				<footer className="px-4 py-4 flex flex-row justify-between w-full text-black ">
-					<p className="customBold">ScM</p>
+				<footer className="px-4 py-4 flex flex-col gap-4 justify-between font-customMed leading-relaxed w-full text-black">
+					<p className="py-4">
+						“Beyond all ideas of right and wrong <br /> there is a field, I will
+						be meeting you there.”
+					</p>
+					<div className="flex flex-row justify-between w-full">
+						<p>ScM</p>
+						<a href="https://www.instagram.com/_ph.ia/">→</a>
+					</div>
 				</footer>
 			</body>
 		</html>

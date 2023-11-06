@@ -34,8 +34,8 @@ export default async function Project({ params }: Props) {
 	const formattedDate = formatDateToMonthDDYYYY(projectDate);
 
 	return (
-		<div className="pt-20 px-4">
-			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash">
+		<div className="px-4">
+			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash pt-20 pb-10 flex flex-col justify-center">
 				<h1 className=" ">{project.name}</h1>
 				<h1>{formattedDate}</h1> {/* Display the formatted date */}
 			</header>
