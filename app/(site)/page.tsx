@@ -7,7 +7,7 @@ export default async function Home() {
 
 	return (
 		<div className="w-screen">
-			<div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+			<div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 				{projects.map((project) => (
 					<Link
 						href={`/projects/${project.slug}`}
@@ -22,7 +22,7 @@ export default async function Home() {
 								alt={project.name}
 								width={1000}
 								height={1000}
-								className="sm:h-[33vh] md:h-[50vh] lg:h-[50vh] w-fill object-cover md:hover:border-gray lg:hover:border-gray hover:border"
+								className="sm:h-[50vh] md:h-[50vh] lg:h-[50vh] w-fill object-cover md:hover:border-gray lg:hover:border-gray hover:border"
 							/>
 						)}
 					</Link>

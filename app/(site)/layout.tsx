@@ -22,7 +22,7 @@ export default function RootLayout({
 				<header className="fixed z-50 mix-blend-difference hover:mix-blend-multiply px-4 w-full">
 					<Link
 						href="/"
-						className=" font-customBlack sm:text-3xl md:text-5xl lg:text-6xl w-full flex justify-between hover:text-ash">
+						className=" font-customBlack sm:text-2xl md:text-5xl lg:text-6xl w-full flex justify-between hover:text-ash">
 						<span>A</span>
 						<span>Woman</span>
 						<span>is</span>
@@ -30,10 +30,9 @@ export default function RootLayout({
 						<span>Field</span>
 					</Link>
 				</header>
-				<main className="">{children}</main>
+				<main className="min-h-screen">{children}</main>
 				<footer className="px-4 py-4 flex flex-row justify-between w-full text-black ">
-					<p className="">ScM</p>
-					<p>2023</p>
+					<p className="customBold">ScM</p>
 				</footer>
 			</body>
 		</html>
