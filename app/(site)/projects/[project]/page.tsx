@@ -52,7 +52,7 @@ export default async function Project({ params }: Props) {
 							alt=""
 							width={1000}
 							height={1000}
-							className="object-contain h-[256px]"
+							className="object-cover h-[256px]"
 						/>
 					))}
 			</div>
