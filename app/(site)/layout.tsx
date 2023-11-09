@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "A Woman is a Field",
@@ -31,7 +28,7 @@ export default function RootLayout({
 					</Link>
 				</header>
 				<main className="min-h-screen">{children}</main>
-				<footer className="px-4 py-4 flex flex-col gap-4 justify-between font-customMed leading-relaxed w-full text-black">
+				{/* <footer className="px-4 py-4 flex flex-col gap-4 justify-between font-customMed leading-relaxed w-full text-black">
 					<p className="py-4">
 						“Beyond all ideas of right and wrong <br /> there is a field, I will
 						be meeting you there.”
@@ -40,7 +37,7 @@ export default function RootLayout({
 						<p>ScM</p>
 						<a href="https://www.instagram.com/_ph.ia/">→</a>
 					</div>
-				</footer>
+				</footer> */}
 			</body>
 		</html>
 	);
