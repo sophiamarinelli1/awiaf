@@ -39,7 +39,7 @@ export default async function Project({ params }: Props) {
 				<h1 className=" ">{project.name}</h1>
 				<h1>{formattedDate}</h1> {/* Display the formatted date */}
 			</header>
-			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-gray font-customBold">
+			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-pink font-customBold">
 				<PortableText value={project.content}></PortableText>
 			</div>
 			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-16 pb-16">
