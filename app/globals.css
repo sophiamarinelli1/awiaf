@@ -27,6 +27,11 @@
 	src: url("/fonts/NeueHaasDisplay-Light.woff2");
 }
 
+@font-face {
+	font-family: "ABCSynt-Regular-Trial";
+	src: url("/fonts/ABCSynt-Regular-Trial.woff2");
+}
+
 * {
 	line-height: 1.02;
 }

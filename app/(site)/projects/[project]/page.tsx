@@ -2,7 +2,8 @@ import { getProject } from "@/sanity/schemas/sanity-utils";
 import { getProjects } from "@/sanity/schemas/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
-import Link from "next/link";
+import PostHeader from "../../components/posts/PostHeader";
+import ButtonSmall from "../../components/buttons/ButtonSmall";
 
 type Props = {
 	params: { project: string };
@@ -32,14 +33,14 @@ export default async function Project({ params }: Props) {
 	const projectDate =
 		project.date instanceof Date ? project.date : new Date(project.date);
 	const formattedDate = formatDateToMonthDDYYYY(projectDate);
-
 	return (
-		<div className="px-4">
-			<header className="sm:text-2xl md:text-5xl lg:text-6xl text-ash pt-32 pb-16 flex flex-col justify-center">
-				<h1 className=" ">{project.name}</h1>
-				<h1>{formattedDate}</h1> {/* Display the formatted date */}
-			</header>
-			<div className="sm:text-2xl md:text-5xl lg:text-6xl text-justify text-pink font-customBold">
+		<div className="">
+			<ButtonSmall title="Back" href="/" />
+			<PostHeader project={project} />
+			<h1 className="sm:text-body lg:text-2xl sm:px-4 lg:px-12 ">
+				{formattedDate}
+			</h1>
+			<div className={richTextStyles}>
 				<PortableText value={project.content}></PortableText>
 			</div>
 			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-16 pb-16">
@@ -59,3 +60,19 @@ export default async function Project({ params }: Props) {
 		</div>
 	);
 }
+
+const richTextStyles = `
+sm:text-body
+lg:text-2xl
+sm:p-4
+lg:p-12
+text-justify
+text-pink
+font-customBold
+w-full
+h-full
+prose-heading:text-2xl
+flex
+flex-col
+gap-6
+`;
