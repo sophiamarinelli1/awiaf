@@ -1,6 +1,8 @@
 import { getProjects } from "@/sanity/schemas/sanity-utils";
 import PostComponent from "./components/posts/PostComponent";
 
+export const revalidate = 60;
+
 export default async function Home() {
 	const projects = await getProjects();
 

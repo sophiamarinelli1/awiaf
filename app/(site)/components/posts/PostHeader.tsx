@@ -18,7 +18,7 @@ const PostHeader = ({ project }: Props) => {
 					alt={project.name}
 					width={1000}
 					height={1000}
-					className="fixed right-0 bottom-0 sm:h-24 lg:h-48 sm:w-24 lg:w-48 mix-blend-luminosity"
+					className="fixed left-0 top-0 sm:h-24 lg:h-48 sm:w-24 lg:w-48 mix-blend-luminosity"
 				/>
 			</Link>
 		</div>

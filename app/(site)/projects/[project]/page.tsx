@@ -43,20 +43,6 @@ export default async function Project({ params }: Props) {
 			<div className={richTextStyles}>
 				<PortableText value={project.content}></PortableText>
 			</div>
-			<div className="w-full grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 pt-16 pb-16">
-				{Array.isArray(project.gallery) &&
-					project.gallery.length > 0 &&
-					project.gallery.map((slide, i) => (
-						<Image
-							key={i}
-							src={slide.asset.url}
-							alt=""
-							width={1000}
-							height={1000}
-							className="object-cover h-[256px]"
-						/>
-					))}
-			</div>
 		</div>
 	);
 }
